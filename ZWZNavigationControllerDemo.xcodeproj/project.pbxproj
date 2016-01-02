@@ -13,6 +13,7 @@
 		AEB08BEE1C37E65800250E7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEB08BEC1C37E65800250E7E /* Main.storyboard */; };
 		AEB08BF01C37E65800250E7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEB08BEF1C37E65800250E7E /* Assets.xcassets */; };
 		AEB08BF31C37E65800250E7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEB08BF11C37E65800250E7E /* LaunchScreen.storyboard */; };
+		AEB08BFB1C37E68600250E7E /* ZWZNavigationController in Resources */ = {isa = PBXBuildFile; fileRef = AEB08BFA1C37E68600250E7E /* ZWZNavigationController */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AEB08BEF1C37E65800250E7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEB08BF21C37E65800250E7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEB08BF41C37E65800250E7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEB08BFA1C37E68600250E7E /* ZWZNavigationController */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ZWZNavigationController; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		AEB08BD71C37E65800250E7E = {
 			isa = PBXGroup;
 			children = (
+				AEB08BFA1C37E68600250E7E /* ZWZNavigationController */,
 				AEB08BE21C37E65800250E7E /* ZWZNavigationControllerDemo */,
 				AEB08BE11C37E65800250E7E /* Products */,
 			);
@@ -138,6 +141,7 @@
 			files = (
 				AEB08BF31C37E65800250E7E /* LaunchScreen.storyboard in Resources */,
 				AEB08BF01C37E65800250E7E /* Assets.xcassets in Resources */,
+				AEB08BFB1C37E68600250E7E /* ZWZNavigationController in Resources */,
 				AEB08BEE1C37E65800250E7E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +268,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZWZNavigationControllerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zwz.ZWZNavigationControllerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -275,6 +280,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZWZNavigationControllerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zwz.ZWZNavigationControllerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
