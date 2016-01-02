@@ -8,14 +8,13 @@
 
 #import "ZWZNavigationController.h"
 
-@interface ZWZNavigationController () <UINavigationControllerDelegate>
+@interface ZWZNavigationController ()
 @property (nonatomic) BOOL hasShowRootViewController;
 @property (nonatomic) NSMapTable *mapTable;
-
-@property (nonatomic) UIView *coverView;
 @end
 
 @implementation ZWZNavigationController
+#pragma mark - life cycle
 
 - (instancetype)initWithNavigationBarClass:(Class)navigationBarClass toolbarClass:(Class)toolbarClass
 {
@@ -24,18 +23,6 @@
         
     }
     return self;
-}
-
-#pragma mark - life cycle
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    self.delegate = self;
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
 }
 
 - (UIViewController *)childViewControllerForStatusBarStyle
