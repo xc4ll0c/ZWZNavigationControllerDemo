@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ZWZNavigationController.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.navigationItem.title = @"ViewController";
+    
+    [(ZWZNavigationController *)self.navigationController setNavigationBarBackgroudColor:[UIColor clearColor]
+                                                                       forViewController:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,4 +28,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction)showTableViewController:(id)sender {
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *vc  = [storyBoard instantiateViewControllerWithIdentifier:@"TableViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)toRootViewController:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 @end

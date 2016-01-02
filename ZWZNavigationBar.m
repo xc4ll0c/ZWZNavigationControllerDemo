@@ -11,6 +11,9 @@
 @interface ZWZNavigationBar ()
 @property (nonatomic) UIView *colorView;
 @property (nonatomic) UIColor *currentColor;
+
+@property (nonatomic) UIImage *zwzShadowImage;
+@property (nonatomic) UIImage *zwzBackgroundImage;
 @end
 
 @implementation ZWZNavigationBar
@@ -37,6 +40,7 @@
     if (color == nil) return;
     if (duration > 0) {
         if (usingSpring) {
+            
             [UIView animateWithDuration:duration delay:0 usingSpringWithDamping:1 initialSpringVelocity:0 options:options animations:^{
                 self.colorView.backgroundColor = color;
             } completion:^(BOOL finished) {
@@ -53,6 +57,7 @@
 
     self.currentColor = color;
 }
+
 
 - (void)layoutSubviews
 {

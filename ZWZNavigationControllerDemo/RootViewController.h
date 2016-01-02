@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RootViewController.h
 //  ZWZNavigationControllerDemo
 //
 //  Created by wenZheng Zhang on 16/1/2.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface RootViewController : UIViewController
 
 @end
