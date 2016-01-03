@@ -13,13 +13,13 @@
 		AEB08BF01C37E65800250E7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEB08BEF1C37E65800250E7E /* Assets.xcassets */; };
 		AEB08BF31C37E65800250E7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEB08BF11C37E65800250E7E /* LaunchScreen.storyboard */; };
 		AEB08BFE1C37E6B900250E7E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB08BFD1C37E6B900250E7E /* RootViewController.m */; };
-		AEB08C0A1C37EBFB00250E7E /* ZWZNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB08C011C37EBFB00250E7E /* ZWZNavigationBar.m */; };
-		AEB08C0B1C37EBFB00250E7E /* ZWZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB08C041C37EBFB00250E7E /* ZWZNavigationController.m */; };
 		AEB08C101C37EC2600250E7E /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB08C0F1C37EC2600250E7E /* TableViewController.m */; };
 		AEB08C131C37ED5600250E7E /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB08C121C37ED5600250E7E /* CollectionViewController.m */; };
 		AEB08C161C37F1C200250E7E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB08C151C37F1C200250E7E /* ViewController.m */; };
 		AEB08C191C38FB1400250E7E /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB08C181C38FB1400250E7E /* TableViewCell.m */; };
 		AEB08C1C1C38FD7800250E7E /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB08C1B1C38FD7800250E7E /* CollectionViewCell.m */; };
+		AEB08C231C3908EC00250E7E /* ZWZNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB08C1E1C3908EC00250E7E /* ZWZNavigationBar.m */; };
+		AEB08C241C3908EC00250E7E /* ZWZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB08C211C3908EC00250E7E /* ZWZNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,12 +33,6 @@
 		AEB08BF41C37E65800250E7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEB08BFC1C37E6B900250E7E /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		AEB08BFD1C37E6B900250E7E /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		AEB08C001C37EBFB00250E7E /* ZWZNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWZNavigationBar.h; sourceTree = "<group>"; };
-		AEB08C011C37EBFB00250E7E /* ZWZNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWZNavigationBar.m; sourceTree = "<group>"; };
-		AEB08C021C37EBFB00250E7E /* ZWZNavigationBarProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWZNavigationBarProtocol.h; sourceTree = "<group>"; };
-		AEB08C031C37EBFB00250E7E /* ZWZNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWZNavigationController.h; sourceTree = "<group>"; };
-		AEB08C041C37EBFB00250E7E /* ZWZNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWZNavigationController.m; sourceTree = "<group>"; };
-		AEB08C051C37EBFB00250E7E /* ZWZNavigationControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWZNavigationControllerProtocol.h; sourceTree = "<group>"; };
 		AEB08C0E1C37EC2600250E7E /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		AEB08C0F1C37EC2600250E7E /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		AEB08C111C37ED5600250E7E /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
@@ -49,6 +43,12 @@
 		AEB08C181C38FB1400250E7E /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		AEB08C1A1C38FD7800250E7E /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		AEB08C1B1C38FD7800250E7E /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		AEB08C1D1C3908EC00250E7E /* ZWZNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZWZNavigationBar.h; path = ZWZNavigationController/ZWZNavigationBar.h; sourceTree = "<group>"; };
+		AEB08C1E1C3908EC00250E7E /* ZWZNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZWZNavigationBar.m; path = ZWZNavigationController/ZWZNavigationBar.m; sourceTree = "<group>"; };
+		AEB08C1F1C3908EC00250E7E /* ZWZNavigationBarProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZWZNavigationBarProtocol.h; path = ZWZNavigationController/ZWZNavigationBarProtocol.h; sourceTree = "<group>"; };
+		AEB08C201C3908EC00250E7E /* ZWZNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZWZNavigationController.h; path = ZWZNavigationController/ZWZNavigationController.h; sourceTree = "<group>"; };
+		AEB08C211C3908EC00250E7E /* ZWZNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZWZNavigationController.m; path = ZWZNavigationController/ZWZNavigationController.m; sourceTree = "<group>"; };
+		AEB08C221C3908EC00250E7E /* ZWZNavigationControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZWZNavigationControllerProtocol.h; path = ZWZNavigationController/ZWZNavigationControllerProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,12 +116,12 @@
 		AEB08BFF1C37EBE100250E7E /* ZWZNavigationController */ = {
 			isa = PBXGroup;
 			children = (
-				AEB08C001C37EBFB00250E7E /* ZWZNavigationBar.h */,
-				AEB08C011C37EBFB00250E7E /* ZWZNavigationBar.m */,
-				AEB08C021C37EBFB00250E7E /* ZWZNavigationBarProtocol.h */,
-				AEB08C031C37EBFB00250E7E /* ZWZNavigationController.h */,
-				AEB08C041C37EBFB00250E7E /* ZWZNavigationController.m */,
-				AEB08C051C37EBFB00250E7E /* ZWZNavigationControllerProtocol.h */,
+				AEB08C1D1C3908EC00250E7E /* ZWZNavigationBar.h */,
+				AEB08C1E1C3908EC00250E7E /* ZWZNavigationBar.m */,
+				AEB08C1F1C3908EC00250E7E /* ZWZNavigationBarProtocol.h */,
+				AEB08C201C3908EC00250E7E /* ZWZNavigationController.h */,
+				AEB08C211C3908EC00250E7E /* ZWZNavigationController.m */,
+				AEB08C221C3908EC00250E7E /* ZWZNavigationControllerProtocol.h */,
 			);
 			name = ZWZNavigationController;
 			sourceTree = "<group>";
@@ -196,11 +196,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEB08C0A1C37EBFB00250E7E /* ZWZNavigationBar.m in Sources */,
 				AEB08BE81C37E65800250E7E /* AppDelegate.m in Sources */,
-				AEB08C0B1C37EBFB00250E7E /* ZWZNavigationController.m in Sources */,
 				AEB08BFE1C37E6B900250E7E /* RootViewController.m in Sources */,
 				AEB08C191C38FB1400250E7E /* TableViewCell.m in Sources */,
+				AEB08C241C3908EC00250E7E /* ZWZNavigationController.m in Sources */,
+				AEB08C231C3908EC00250E7E /* ZWZNavigationBar.m in Sources */,
 				AEB08C161C37F1C200250E7E /* ViewController.m in Sources */,
 				AEB08C1C1C38FD7800250E7E /* CollectionViewCell.m in Sources */,
 				AEB08BE51C37E65800250E7E /* main.m in Sources */,
