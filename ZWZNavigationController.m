@@ -15,7 +15,6 @@
 
 @implementation ZWZNavigationController
 #pragma mark - life cycle
-
 - (instancetype)initWithNavigationBarClass:(Class)navigationBarClass toolbarClass:(Class)toolbarClass
 {
     self = [super initWithNavigationBarClass:[ZWZNavigationBar class] toolbarClass:toolbarClass];

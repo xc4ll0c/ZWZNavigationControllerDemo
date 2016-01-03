@@ -9,16 +9,17 @@
 #import "TableViewController.h"
 #import "CollectionViewController.h"
 #import "ZWZNavigationController.h"
+#import "TableViewCell.h"
 
 @interface TableViewController ()
-
+@property (nonatomic) NSArray *images;
 @end
 
 @implementation TableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.rowHeight = 70;
+    self.tableView.rowHeight = 200;
     
     self.navigationItem.title = @"TableViewController";
     
@@ -44,6 +45,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
 #pragma makr - event handling
 - (void)dismiss:(id)sender
 {
@@ -56,13 +59,13 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 100;
+    return self.images.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1];
+    TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cell.pitureImageView.image = self.images[indexPath.row];
     return cell;
 }
 
@@ -73,5 +76,22 @@
     CollectionViewController *cvc  = [storyBoard instantiateViewControllerWithIdentifier:@"CollectionViewController"];
 
     [self.navigationController pushViewController:cvc animated:YES];
+}
+
+#pragma mark - getter and setter
+- (NSArray *)images
+{
+    if (_images == nil) {
+        NSMutableArray *images = [[NSMutableArray alloc] init];
+        NSString *baseName = @"FICDDemoImage";
+        for (NSInteger i = 0; i < 11 * 4; i++) {
+            NSString *imageName = [NSString stringWithFormat:@"%@%03ld", baseName, (long)(i % 11)];
+            UIImage *image = [UIImage imageNamed:imageName];
+            if (image == nil) break;
+            else [images addObject:image];
+        }
+        _images = [images copy];
+    }
+    return _images;
 }
 @end

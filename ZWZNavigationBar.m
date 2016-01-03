@@ -9,6 +9,8 @@
 #import "ZWZNavigationBar.h"
 
 @interface ZWZNavigationBar ()
+
+@property (nonatomic) UIView *visualEffectView;
 @property (nonatomic) UIView *colorView;
 @property (nonatomic) UIColor *currentColor;
 
@@ -21,10 +23,18 @@
 - (UIView *)colorView
 {
     if (_colorView == nil) {
+        
         _colorView = [[UIView alloc] init];
         _colorView.backgroundColor = [UIColor clearColor];
         _colorView.frame = [self colorLayerFrame];
         _colorView.userInteractionEnabled = NO;
+        
+        if ([UIVisualEffectView class]) {
+            UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+            _visualEffectView = [[UIVisualEffectView alloc] initWithEffect:effect];
+            [_colorView addSubview:_visualEffectView];
+            _visualEffectView.frame = _colorView.bounds;
+        }
         
         [self setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
         [self setShadowImage:[[UIImage alloc] init]];
@@ -38,24 +48,40 @@
 - (void)setBarBackgroundColor:(UIColor *)color animationDuration:(NSTimeInterval)duration options:(UIViewAnimationOptions)options usingSpring:(BOOL)usingSpring
 {
     if (color == nil) return;
+    
+    UIColor *nColor = color;
+    CGFloat alpha   = 1;
+    
+    if (![nColor isEqual:[UIColor clearColor]] && self.visualEffectView != nil) {
+        CGFloat red,green,blue,alpha;
+        [color getRed:&red green:&green blue:&blue alpha:&alpha];
+        nColor = [UIColor colorWithRed:red green:green blue:blue alpha:0.65];
+    } else if (self.visualEffectView != nil) {
+        alpha = 0;
+    }
+    
+    void (^animationBlock)(void) = ^{
+        if (self.visualEffectView != nil) self.visualEffectView.backgroundColor = nColor;
+        else self.colorView.backgroundColor = nColor;
+        self.colorView.alpha = 1;
+    };
+ 
     if (duration > 0) {
         if (usingSpring) {
-            
-            [UIView animateWithDuration:duration delay:0 usingSpringWithDamping:1 initialSpringVelocity:0 options:options animations:^{
-                self.colorView.backgroundColor = color;
-            } completion:^(BOOL finished) {
+            [UIView animateWithDuration:duration delay:0 usingSpringWithDamping:1 initialSpringVelocity:0 options:options animations:animationBlock
+                             completion:^(BOOL finished) {
                 
-            }];
+                             }];
         } else {
-            [UIView animateWithDuration:duration delay:0 options:options animations:^{
-                self.colorView.backgroundColor = color;
-            } completion:^(BOOL finished) {
+            [UIView animateWithDuration:duration delay:0 options:options animations:animationBlock
+                             completion:^(BOOL finished) {
                 
-            }];
+                             }];
         }
-    } else self.colorView.backgroundColor = color;
-
-    self.currentColor = color;
+    } else {
+        animationBlock();
+    }
+    self.currentColor = nColor;
 }
 
 
@@ -63,6 +89,7 @@
 {
     [super layoutSubviews];    
     self.colorView.frame = [self colorLayerFrame];
+    if (self.visualEffectView != nil) self.visualEffectView.frame = self.colorView.bounds;
     [self insertSubview:self.colorView atIndex:1];
 }
 
