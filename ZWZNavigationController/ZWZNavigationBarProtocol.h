@@ -11,5 +11,6 @@
 
 @protocol ZWZNavigationBarProtocol <NSObject>
 @required
+@property (nonatomic) UIColor *defaultNavigationBarBackgroundColor;
 - (void)setBarBackgroundColor:(UIColor *)color animationDuration:(NSTimeInterval)duration options:(UIViewAnimationOptions)options usingSpring:(BOOL)usingSpring;
 @end

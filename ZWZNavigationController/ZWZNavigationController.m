@@ -9,8 +9,8 @@
 #import "ZWZNavigationController.h"
 
 @interface ZWZNavigationController ()
-@property (nonatomic) BOOL hasShowRootViewController;
 @property (nonatomic) NSMapTable *mapTable;
+@property (nonatomic) id <UINavigationControllerDelegate> otherDelegate;
 @end
 
 @implementation ZWZNavigationController
@@ -34,10 +34,7 @@
 {
     if (color == nil || viewController == nil) return;
     [self.mapTable setObject:color forKey:viewController];
-    if (viewController == self.topViewController && !self.hasShowRootViewController) {
-        [self.zwzNavigationBar setBarBackgroundColor:color animationDuration:0 options:0 usingSpring:NO];
-        self.hasShowRootViewController = YES;
-    }
+    [self.zwzNavigationBar setBarBackgroundColor:color animationDuration:0 options:0 usingSpring:NO];
 }
 
 - (UIColor *)navigationBarBackgroudColorForViewController:(UIViewController *)viewController
@@ -45,7 +42,7 @@
     return [self.mapTable objectForKey:viewController];
 }
 
-#pragma mark - overide methods
+#pragma makr - override methods
 - (NSArray<UIViewController *> *)popToRootViewControllerAnimated:(BOOL)animated
 {
     NSArray<UIViewController *> *vcs = [super popToRootViewControllerAnimated:animated];
@@ -81,12 +78,14 @@
         UIColor *color = [self navigationBarBackgroudColorForViewController:toVc];
         if (color == nil) {
             color = [[UINavigationBar appearance] backgroundColor];
-            if (color == nil) color = [UIColor whiteColor];
+            if (color == nil) color = self.zwzNavigationBar.defaultNavigationBarBackgroundColor;
             [self setNavigationBarBackgroudColor:color forViewController:toVc];
         }
-        if (color != nil) [self.zwzNavigationBar setBarBackgroundColor:color
-                                                     animationDuration:[context transitionDuration]
-                                                               options:UIViewAnimationOptionCurveEaseInOut usingSpring:NO];
+        if (color != nil)
+            [self.zwzNavigationBar setBarBackgroundColor:color
+                                       animationDuration:[context transitionDuration]
+                                                 options:UIViewAnimationOptionCurveEaseInOut
+                                             usingSpring:NO];
     } completion:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
         
     }];

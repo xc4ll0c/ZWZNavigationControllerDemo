@@ -10,4 +10,5 @@
 #import "ZWZNavigationBarProtocol.h"
 
 @interface ZWZNavigationBar : UINavigationBar <ZWZNavigationBarProtocol>
+@property (nonatomic) UIColor *defaultNavigationBarBackgroundColor;
 @end

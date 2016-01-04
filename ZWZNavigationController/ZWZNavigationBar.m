@@ -8,14 +8,13 @@
 
 #import "ZWZNavigationBar.h"
 
+static const CGFloat kZWZNavigationBarBackgroundColorDefaultAlpha = 0.75;
+
 @interface ZWZNavigationBar ()
 
 @property (nonatomic) UIView *visualEffectView;
 @property (nonatomic) UIView *colorView;
 @property (nonatomic) UIColor *currentColor;
-
-@property (nonatomic) UIImage *zwzShadowImage;
-@property (nonatomic) UIImage *zwzBackgroundImage;
 @end
 
 @implementation ZWZNavigationBar
@@ -25,7 +24,7 @@
     if (_colorView == nil) {
         
         _colorView = [[UIView alloc] init];
-        _colorView.backgroundColor = [UIColor clearColor];
+        _colorView.backgroundColor = self.defaultNavigationBarBackgroundColor;
         _colorView.frame = [self colorLayerFrame];
         _colorView.userInteractionEnabled = NO;
         
@@ -34,6 +33,8 @@
             _visualEffectView = [[UIVisualEffectView alloc] initWithEffect:effect];
             [_colorView addSubview:_visualEffectView];
             _visualEffectView.frame = _colorView.bounds;
+            _visualEffectView.backgroundColor = self.defaultNavigationBarBackgroundColor;
+            _colorView.backgroundColor = [UIColor clearColor];
         }
         
         [self setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
@@ -55,7 +56,7 @@
     if (![nColor isEqual:[UIColor clearColor]] && self.visualEffectView != nil) {
         CGFloat red,green,blue,alpha;
         [color getRed:&red green:&green blue:&blue alpha:&alpha];
-        nColor = [UIColor colorWithRed:red green:green blue:blue alpha:0.65];
+        nColor = [UIColor colorWithRed:red green:green blue:blue alpha:kZWZNavigationBarBackgroundColorDefaultAlpha];
     } else if (self.visualEffectView != nil) {
         alpha = 0;
     }
@@ -63,7 +64,7 @@
     void (^animationBlock)(void) = ^{
         if (self.visualEffectView != nil) self.visualEffectView.backgroundColor = nColor;
         else self.colorView.backgroundColor = nColor;
-        self.colorView.alpha = 1;
+        self.colorView.alpha = alpha;
     };
  
     if (duration > 0) {
@@ -99,4 +100,11 @@
     return CGRectMake(0, 0 - statusBarHeight, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds) + statusBarHeight);
 }
 
+- (UIColor *)defaultNavigationBarBackgroundColor
+{
+    if (_defaultNavigationBarBackgroundColor == nil) {
+        _defaultNavigationBarBackgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:kZWZNavigationBarBackgroundColorDefaultAlpha];
+    }
+    return _defaultNavigationBarBackgroundColor;
+}
 @end
