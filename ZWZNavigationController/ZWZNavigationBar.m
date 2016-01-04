@@ -103,7 +103,10 @@ static const CGFloat kZWZNavigationBarBackgroundColorDefaultAlpha = 0.75;
 - (UIColor *)defaultNavigationBarBackgroundColor
 {
     if (_defaultNavigationBarBackgroundColor == nil) {
-        _defaultNavigationBarBackgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:kZWZNavigationBarBackgroundColorDefaultAlpha];
+        
+        if ([UIVisualEffectView class]) {
+            _defaultNavigationBarBackgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:kZWZNavigationBarBackgroundColorDefaultAlpha];
+        } else _defaultNavigationBarBackgroundColor = [UIColor whiteColor];
     }
     return _defaultNavigationBarBackgroundColor;
 }
