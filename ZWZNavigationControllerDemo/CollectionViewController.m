@@ -24,11 +24,14 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.collectionView registerClass:[CollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     self.navigationItem.title = @"CollectionViewController";
     
-    [(ZWZNavigationController *)self.navigationController setNavigationBarBackgroudColor:[UIColor colorWithRed:arc4random_uniform(255)/255.0
-                                                                                                         green:arc4random_uniform(255)/255.0
-                                                                                                          blue:arc4random_uniform(255)/255.0
-                                                                                                         alpha:1]
-                                                                       forViewController:self];
+    
+    if (arc4random_uniform(2) == 0) {
+        [(ZWZNavigationController *)self.navigationController setNavigationBarBackgroudColor:[UIColor colorWithRed:arc4random_uniform(255)/255.0
+                                                                                                             green:arc4random_uniform(255)/255.0
+                                                                                                              blue:arc4random_uniform(255)/255.0
+                                                                                                             alpha:1]
+                                                                           forViewController:self];
+    }
     self.automaticallyAdjustsScrollViewInsets = NO;
 }
 

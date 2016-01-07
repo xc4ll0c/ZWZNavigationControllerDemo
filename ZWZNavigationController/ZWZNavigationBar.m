@@ -15,6 +15,8 @@ static const CGFloat kZWZNavigationBarBackgroundColorDefaultAlpha = 0.75;
 @property (nonatomic) UIView *visualEffectView;
 @property (nonatomic) UIView *colorView;
 @property (nonatomic) UIColor *currentColor;
+@property (nonatomic) UIColor *previousColor;
+
 @end
 
 @implementation ZWZNavigationBar

@@ -19,8 +19,10 @@
     [super viewDidLoad];
     self.navigationItem.title = @"ViewController";
     
-    [(ZWZNavigationController *)self.navigationController setNavigationBarBackgroudColor:[UIColor clearColor]
-                                                                       forViewController:self];
+    if (arc4random_uniform(2) == 0) {
+        [(ZWZNavigationController *)self.navigationController setNavigationBarBackgroudColor:[UIColor clearColor]
+                                                                           forViewController:self];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

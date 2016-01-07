@@ -15,4 +15,5 @@
 
 @interface ZWZNavigationController : UINavigationController <ZWZNavigationControllerProtocol>
 @property (nonatomic, readonly) ZWZNavigationBar *zwzNavigationBar;
+@property (nonatomic) BOOL shouldReuseCurrrentColor;
 @end
