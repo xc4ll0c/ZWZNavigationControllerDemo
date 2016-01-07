@@ -18,8 +18,6 @@
 		AEB08C161C37F1C200250E7E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB08C151C37F1C200250E7E /* ViewController.m */; };
 		AEB08C191C38FB1400250E7E /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB08C181C38FB1400250E7E /* TableViewCell.m */; };
 		AEB08C1C1C38FD7800250E7E /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB08C1B1C38FD7800250E7E /* CollectionViewCell.m */; };
-		AEB08C231C3908EC00250E7E /* ZWZNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB08C1E1C3908EC00250E7E /* ZWZNavigationBar.m */; };
-		AEB08C241C3908EC00250E7E /* ZWZNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB08C211C3908EC00250E7E /* ZWZNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,12 +41,6 @@
 		AEB08C181C38FB1400250E7E /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		AEB08C1A1C38FD7800250E7E /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		AEB08C1B1C38FD7800250E7E /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
-		AEB08C1D1C3908EC00250E7E /* ZWZNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZWZNavigationBar.h; path = ZWZNavigationController/ZWZNavigationBar.h; sourceTree = "<group>"; };
-		AEB08C1E1C3908EC00250E7E /* ZWZNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZWZNavigationBar.m; path = ZWZNavigationController/ZWZNavigationBar.m; sourceTree = "<group>"; };
-		AEB08C1F1C3908EC00250E7E /* ZWZNavigationBarProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZWZNavigationBarProtocol.h; path = ZWZNavigationController/ZWZNavigationBarProtocol.h; sourceTree = "<group>"; };
-		AEB08C201C3908EC00250E7E /* ZWZNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZWZNavigationController.h; path = ZWZNavigationController/ZWZNavigationController.h; sourceTree = "<group>"; };
-		AEB08C211C3908EC00250E7E /* ZWZNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZWZNavigationController.m; path = ZWZNavigationController/ZWZNavigationController.m; sourceTree = "<group>"; };
-		AEB08C221C3908EC00250E7E /* ZWZNavigationControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZWZNavigationControllerProtocol.h; path = ZWZNavigationController/ZWZNavigationControllerProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,12 +108,6 @@
 		AEB08BFF1C37EBE100250E7E /* ZWZNavigationController */ = {
 			isa = PBXGroup;
 			children = (
-				AEB08C1D1C3908EC00250E7E /* ZWZNavigationBar.h */,
-				AEB08C1E1C3908EC00250E7E /* ZWZNavigationBar.m */,
-				AEB08C1F1C3908EC00250E7E /* ZWZNavigationBarProtocol.h */,
-				AEB08C201C3908EC00250E7E /* ZWZNavigationController.h */,
-				AEB08C211C3908EC00250E7E /* ZWZNavigationController.m */,
-				AEB08C221C3908EC00250E7E /* ZWZNavigationControllerProtocol.h */,
 			);
 			name = ZWZNavigationController;
 			sourceTree = "<group>";
@@ -199,8 +185,6 @@
 				AEB08BE81C37E65800250E7E /* AppDelegate.m in Sources */,
 				AEB08BFE1C37E6B900250E7E /* RootViewController.m in Sources */,
 				AEB08C191C38FB1400250E7E /* TableViewCell.m in Sources */,
-				AEB08C241C3908EC00250E7E /* ZWZNavigationController.m in Sources */,
-				AEB08C231C3908EC00250E7E /* ZWZNavigationBar.m in Sources */,
 				AEB08C161C37F1C200250E7E /* ViewController.m in Sources */,
 				AEB08C1C1C38FD7800250E7E /* CollectionViewCell.m in Sources */,
 				AEB08BE51C37E65800250E7E /* main.m in Sources */,
