@@ -95,12 +95,12 @@
 {
     BOOL ret = [self.transitionCoordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
         UIViewController *toVc = [context viewControllerForKey:UITransitionContextToViewControllerKey];
-        UIViewController *fromVc = [context viewControllerForKey:UITransitionContextToViewControllerKey];
+        UIViewController *fromVc = [context viewControllerForKey:UITransitionContextFromViewControllerKey];
         UIColor *color = [self navigationBarBackgroudColorForViewController:toVc];
         if (color == nil) {
-            color = [[UINavigationBar appearance] backgroundColor];
             if (color == nil && shouldReuseCurrentColor) color = [self navigationBarBackgroudColorForViewController:fromVc];
             if (color == nil) color = self.zwzNavigationBar.defaultNavigationBarBackgroundColor;
+            if (color == nil) color = [[UINavigationBar appearance] backgroundColor];
             [self setNavigationBarBackgroudColor:color forViewController:toVc];
         }
         if (color != nil)

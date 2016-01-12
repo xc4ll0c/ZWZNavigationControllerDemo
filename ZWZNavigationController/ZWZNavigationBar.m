@@ -8,7 +8,7 @@
 
 #import "ZWZNavigationBar.h"
 
-static const CGFloat kZWZNavigationBarBackgroundColorDefaultAlpha = 0.75;
+static const CGFloat kZWZNavigationBarBackgroundColorDefaultAlpha = 1;
 
 @interface ZWZNavigationBar ()
 
@@ -30,7 +30,7 @@ static const CGFloat kZWZNavigationBarBackgroundColorDefaultAlpha = 0.75;
         _colorView.frame = [self colorLayerFrame];
         _colorView.userInteractionEnabled = NO;
         
-        if ([UIVisualEffectView class]) {
+        if ([UIVisualEffectView class] && kZWZNavigationBarBackgroundColorDefaultAlpha < 1) {
             UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
             _visualEffectView = [[UIVisualEffectView alloc] initWithEffect:effect];
             [_colorView addSubview:_visualEffectView];
